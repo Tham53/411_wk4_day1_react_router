@@ -1,7 +1,7 @@
 .card-container {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 .card {
@@ -19,7 +19,7 @@ ul {
 }
 
 .text-gray {
-  color: gray
+  color: black
 }
 
 .nav-list {
@@ -28,7 +28,7 @@ ul {
 }
 
 .nav-list-item {
-  margin: auto 20px;
+  margin: auto 160px;
 }
 
 .car-container {
