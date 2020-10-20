@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react'
-import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
+import React from 'react'
+import { AppBar, Toolbar, IconButton, 
+Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 
@@ -15,14 +16,18 @@ const Navigation = () => {
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
-                        <Link to='/'>Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
                     <li className="nav-list-item">
-                        <Link to='/about'>About</Link>
+                        <Link to="/about">About</Link>
                     </li>
-                    <li className="nav-list-item">
-                        <Link to='/cars'>Cars</Link>
-                    </li>
+                    <li className="nav-list-item"
+                        onClick={() => {
+                            document.cookie = "loggedIn="
+                            window.location.replace("/login")
+                        }}>
+                            Logout
+                            </li>
                 </ul>
             </Toolbar>
         </AppBar>
